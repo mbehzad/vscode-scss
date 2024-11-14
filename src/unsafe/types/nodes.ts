@@ -49,7 +49,8 @@ export enum NodeType {
 	For,
 	Each,
 	While,
-	MixinContent,
+	MixinContentReference,
+	MixinContentDeclaration,
 	Media,
 	Keyframe,
 	FontFace,
@@ -67,7 +68,18 @@ export enum NodeType {
 	AtApplyRule,
 	CustomPropertyDeclaration,
 	CustomPropertySet,
-	ListEntry
+	ListEntry,
+	Supports,
+	SupportsCondition,
+	NamespacePrefix,
+	GridLine,
+	Plugin,
+	UnknownAtRule,
+	Use,
+	ModuleConfiguration,
+	Forward,
+	ForwardVisibility,
+	Module
 }
 
 export interface INode {

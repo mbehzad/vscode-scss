@@ -18,6 +18,12 @@ describe('SCSS Definition Test', () => {
 		await testDefinition(docUri, position(2, 13), expectedLocation);
 	});
 
+	it('should find definition for variables in media', async () => {
+		const expectedDocumentUri = getDocUri('_variables.scss');
+		const expectedLocation = sameLineLocation(expectedDocumentUri, 2, 1, 11);
+		await testDefinition(docUri, position(6, 12), expectedLocation);
+	});
+
 	it('should find definition for functions', async () => {
 		const expectedDocumentUri = getDocUri('_functions.scss');
 		const expectedLocation = sameLineLocation(expectedDocumentUri, 1, 1, 9);
